@@ -1,0 +1,7 @@
+flet>=0.4.2
+win10toast_click>=0.1.2
+notify-py>=0.3.42
+plyer>=2.0.0
+win10toast>=0.9
+py-notifier>=0.5.0
+# notify2
