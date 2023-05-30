@@ -3,11 +3,10 @@ import utils
 
 
 def main(page: ft.Page):
-    page.title = "Flet Notifications - TheEthicalBoy"
+    page.title = "Python Desktop Notifications - TheEthicalBoy"
     is_windows = page.platform == "windows"
-    page.window_always_on_top = True
-    page.horizontal_alignment = "center"
-    page.vertical_alignment = "center"
+    # page.window_always_on_top = True
+    page.horizontal_alignment = page.vertical_alignment = "center"
     page.theme_mode = "light"
     page.scroll = "auto"
     page.window_min_height, page.window_min_width = 371, 542
@@ -15,6 +14,10 @@ def main(page: ft.Page):
     page.window_center()
 
     def show(e):
+        """
+        Called when the user clicks on one of the buttons.
+        Checks which button was clicked by checking the data attribute and runs the appropriate notification engine.
+        """
         if e.control.data == 1:
             page.show_snack_bar(ft.SnackBar(ft.Text("Running engine `plyer`..."), open=True))
             utils.notif_with_plyer(title_field.value, message_field.value)
@@ -32,60 +35,69 @@ def main(page: ft.Page):
             utils.notif_with_win10toast_click(title_field.value, message_field.value)
 
     page.add(
-        ft.Row(
+        ft.Column(
             controls=[
                 title_field := ft.TextField(
                     value="Ethical Title :)",
                     label="title",
-                    width=210,
+                    width=350,
                     border=ft.InputBorder.UNDERLINE,
                     keyboard_type=ft.KeyboardType.TEXT,
                 ),
-                ft.Text("--", weight=ft.FontWeight.BOLD),
                 message_field := ft.TextField(
                     value="Flet Notifications by TheEthicalBoy",
-                    label="message",
-                    width=260,
+                    label="message/description",
+                    width=350,
                     border=ft.InputBorder.UNDERLINE,
                     keyboard_type=ft.KeyboardType.TEXT,
+                    multiline=True,
                 )
             ],
-            # wrap=True,
-            vertical_alignment=ft.CrossAxisAlignment.CENTER,
+            horizontal_alignment=ft.CrossAxisAlignment.CENTER,
             alignment=ft.MainAxisAlignment.CENTER
         ),
-        ft.Column(
-            controls=[
-                ft.FilledTonalButton(
-                    "Show 'plyer' Notification",
-                    data=1,
-                    on_click=show
+        ft.Divider(height=50, color=ft.colors.RED_ACCENT_700),
+        ft.Row(
+            [
+                ft.Column(
+                    controls=[
+                        ft.FilledTonalButton(
+                            "plyer Notification",
+                            data=1,
+                            on_click=show
+                        ),
+                        ft.FilledTonalButton(
+                            "notifpy Notification",
+                            data=2,
+                            on_click=show
+                        ),
+                        ft.FilledTonalButton(
+                            "pynotifier Notification",
+                            data=3,
+                            on_click=show
+                        ),
+                    ],
+                    horizontal_alignment=ft.CrossAxisAlignment.CENTER
                 ),
-                ft.FilledTonalButton(
-                    "Show 'notifpy' Notification",
-                    data=2,
-                    on_click=show
-                ),
-                ft.FilledTonalButton(
-                    "Show 'pynotifier' Notification",
-                    data=3,
-                    on_click=show
-                ),
-                ft.FilledTonalButton(
-                    "Show 'win10toast' Notification",
-                    data=4, on_click=show,
-                    disabled=not is_windows
-                ),
-                ft.FilledTonalButton(
-                    "Show 'win10toast_click' Notification",
-                    data=5,
-                    on_click=show,
-                    disabled=not is_windows
+                ft.Column(
+                    controls=[
+                        ft.FilledTonalButton(
+                            "win10toast Notification",
+                            data=4, on_click=show,
+                            disabled=not is_windows
+                        ),
+                        ft.FilledTonalButton(
+                            "win10toast_click Notification",
+                            data=5,
+                            on_click=show,
+                            disabled=not is_windows
+                        )
+                    ],
+                    horizontal_alignment=ft.CrossAxisAlignment.CENTER
                 )
             ],
-            horizontal_alignment=ft.CrossAxisAlignment.CENTER
+            alignment=ft.MainAxisAlignment.CENTER
         )
-
     )
 
 
