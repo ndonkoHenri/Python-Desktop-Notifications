@@ -11,6 +11,7 @@ environment:
     secure: Ti46nPnZgFh0nRteU6ma0EhJnCTW7PaMn9hnnewZl4gBFPyRQnXNCwGog02+MRLX
 
 install:
+- pip install --upgrade pip virtualenv
 - pip install -r requirements.txt
 
 build_script:
@@ -35,10 +36,10 @@ for:
     - image: Visual Studio 2019
 
   after_build:
-  - 7z a counter-windows.zip %CD%\dist\*.exe
+  - 7z a python-desktop-notications-windows.zip %CD%\dist\*.exe
 
   artifacts:
-  - path: counter-windows.zip
+  - path: python-desktop-notications-windows.zip
 
 #
 #   macOS package
@@ -49,10 +50,10 @@ for:
     - image: macOS
 
   after_build:
-  - tar -czvf counter-macos.tar.gz -C dist counter.app
+  - tar -czvf python-desktop-notications-macos.tar.gz -C dist python-desktop-notications.app
 
   artifacts:
-  - path: counter-macos.tar.gz
+  - path: python-desktop-notications-macos.tar.gz
 
 #
 #   Linux package
@@ -63,7 +64,7 @@ for:
     - image: Ubuntu
 
   after_build:
-  - tar -czvf counter-linux.tar.gz -C dist counter
+  - tar -czvf python-desktop-notications-linux.tar.gz -C dist python-desktop-notications
 
   artifacts:
-  - path: counter-linux.tar.gz
+  - path: python-desktop-notications-linux.tar.gz
