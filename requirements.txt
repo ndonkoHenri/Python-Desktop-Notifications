@@ -7,6 +7,6 @@ py-notifier>=0.5.0
 # notify2
 
 # just for CI build
-pyinstaller>=5.7.0
+pyinstaller
 pillow
 
