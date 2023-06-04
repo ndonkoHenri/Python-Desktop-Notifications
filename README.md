@@ -1,21 +1,31 @@
 # Python Desktop Notifications
 
-The Blog Post to this could be found [here](https://ndonkohenri.medium.com/sending-desktop-notifications-in-python-flet-97f0834f993d?source=user_profile---------5----------------------------).
+The Blog Post to this could be found [here](https://ndonkohenri.medium.com/sending-desktop-notifications-in-python-flet-97f0834f993d).
 
 ## Description
 
 This repo is meant to expose the various ways one could send desktop notifications using python.
 I went through some available python projects to send desktop notifications, and came up this List and also built a GUI app (with [Flet](https://flet.dev)) to compile all of them on one area.
 
-I will keep updating the app once I discover any other python notification library. Feel free to make suggestions too :)
+## Some Captures
+- GUI application ran on windows:
+
+![gui-application-python-desktop-notification](https://github.com/ndonkoHenri/Python-Desktop-Notifications/assets/98978078/d7ac5fe6-237a-4704-9690-6f2542d0ec66)
+
+- Notfication sent with Plyer
+
+![notif_plyer](https://github.com/ndonkoHenri/Python-Desktop-Notifications/assets/98978078/46171908-db5f-4cd7-bc8e-018a3c84391e)
+
+
+I will keep this repo updated once I find any other python notification library. Please, feel free to make suggestions too :)
 
 ### Libraries 
 
-- [Plyer](https://github.com/kivy/plyer) - Cross platform
-- [notify-py](https://github.com/ms7m/notify-py) - Cross Platform
-- [Pynotifier](https://github.com/YuriyLisovskiy/pynotifier) - Cross platform
-- [win10toast](https://github.com/jithurjacob/Windows-10-Toast-Notifications) - Windows only
-- [win10toast_click](https://github.com/vardecab/win10toast-click) - Windows only
+- **[Plyer](https://github.com/kivy/plyer)** - Cross platform
+- **[notify-py](https://github.com/ms7m/notify-py)** - Cross Platform
+- **[Pynotifier](https://github.com/YuriyLisovskiy/pynotifier)** - Cross platform
+- **[win10toast](https://github.com/jithurjacob/Windows-10-Toast-Notifications)** - Windows only
+- **[win10toast_click](https://github.com/vardecab/win10toast-click)** - Windows only
 
 To install the packages, you could make use of this command:
 
