@@ -1,15 +1,13 @@
 # Python Desktop Notifications
 
-The Blog Post to this could be found [here]().
+The Blog Post to this could be found [here](https://ndonkohenri.medium.com/sending-desktop-notifications-in-python-flet-97f0834f993d?source=user_profile---------5----------------------------).
 
 ## Description
 
 This repo is meant to expose the various ways one could send desktop notifications using python.
 I went through some available python projects to send desktop notifications, and came up this List and also built a GUI app (with [Flet](https://flet.dev)) to compile all of them on one area.
 
-I will keep updating the app once I discover any other python notification library.
-
-Feel free to make suggestions too :)
+I will keep updating the app once I discover any other python notification library. Feel free to make suggestions too :)
 
 ### Libraries 
 
@@ -24,6 +22,11 @@ To install the packages, you could make use of this command:
 ```bash
 pip install -r requirements.txt
 ```
+## Code Structure
+- `main.py`: contains the code for the flet-made GUI application;
+- `utils.py`: contains the how-to-use code for each notification engine mentioned above;
+- `test_images` folder: contains images used used in `utils.py`
+
 
 ## Note
 - I tested these libraries only on Windows 10, so I don't/can't know exactly how they will behave on other operating systems. I will be happy to receive Feedbacks on how they work on your OSs.
