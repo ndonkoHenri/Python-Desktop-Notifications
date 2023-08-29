@@ -12,8 +12,8 @@ environment:
 
 install:
 #- python -m pip install --upgrade pip virtualenv
-- python.exe -m pip install --upgrade pip
-- pip install pillow<=9.4.0
+- python.exe -m pip install --upgrade pip setuptools wheel
+- pip install pillow
 - pip install pyinstaller
 - pip install -r requirements.txt
 
