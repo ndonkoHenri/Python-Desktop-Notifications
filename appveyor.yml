@@ -12,8 +12,9 @@ environment:
 
 install:
 #- python -m pip install --upgrade pip virtualenv
-- pip install -r requirements.txt
 - pip install pyinstaller
+- pip install pillow
+- pip install -r requirements.txt
 
 build_script:
 - flet pack main.py --name "Python Desktop Notifications" --icon test_images/png_test_image.png --product-name "Python Desktop Notifications" --product-version "0.1" --copyright "Copyright (c) 2023 TheEthicalBoy"
