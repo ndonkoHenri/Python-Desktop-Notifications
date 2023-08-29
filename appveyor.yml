@@ -12,8 +12,9 @@ environment:
 
 install:
 #- python -m pip install --upgrade pip virtualenv
-- pip install pyinstaller
+- python.exe -m pip install --upgrade pip
 - pip install pillow
+- pip install pyinstaller
 - pip install -r requirements.txt
 
 build_script:
