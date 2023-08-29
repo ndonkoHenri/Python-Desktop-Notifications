@@ -8,7 +8,7 @@ stack: python 3.10
 
 environment:
   GITHUB_TOKEN:
-    secure: Ti46nPnZgFh0nRteU6ma0EhJnCTW7PaMn9hnnewZl4gBFPyRQnXNCwGog02+MRLX
+    secure: 7sOlr0sdn+ttszef9sj9sl8T6Yn+2mS+Bj2yYuEuGAt4ihqrydk1mlDR0q8+XgD1
 
 install:
 #- python -m pip install --upgrade pip virtualenv
