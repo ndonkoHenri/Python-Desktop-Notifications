@@ -19,19 +19,19 @@ def main(page: ft.Page):
         Checks which button was clicked by checking the data attribute and runs the appropriate notification engine.
         """
         if e.control.data == 1:
-            page.show_snack_bar(ft.SnackBar(ft.Text("Running engine `plyer`..."), open=True))
+            page.show_snack_bar(ft.SnackBar(ft.Text("Running engine `plyer`...")))
             utils.notif_with_plyer(title_field.value, message_field.value)
         elif e.control.data == 2:
-            page.show_snack_bar(ft.SnackBar(ft.Text("Running engine `notifpy`..."), open=True))
+            page.show_snack_bar(ft.SnackBar(ft.Text("Running engine `notifpy`...")))
             utils.notif_with_notifpy(title_field.value, message_field.value)
         elif e.control.data == 3:
-            page.show_snack_bar(ft.SnackBar(ft.Text("Running engine `pynotifier`..."), open=True))
+            page.show_snack_bar(ft.SnackBar(ft.Text("Running engine `pynotifier`...")))
             utils.notif_with_pynotifier(title_field.value, message_field.value)
         elif e.control.data == 4:
-            page.show_snack_bar(ft.SnackBar(ft.Text("Running engine `win10toast`..."), open=True))
+            page.show_snack_bar(ft.SnackBar(ft.Text("Running engine `win10toast`...")))
             utils.notif_with_win10toast(title_field.value, message_field.value)
         elif e.control.data == 5:
-            page.show_snack_bar(ft.SnackBar(ft.Text("Running engine `win10toast_click`..."), open=True))
+            page.show_snack_bar(ft.SnackBar(ft.Text("Running engine `win10toast_click`...")))
             utils.notif_with_win10toast_click(title_field.value, message_field.value)
 
     page.add(
