@@ -1,4 +1,4 @@
-flet>=0.7.1
+flet==0.7.1
 win10toast_click>=0.1.2
 notify-py>=0.3.42
 plyer>=2.0.0
